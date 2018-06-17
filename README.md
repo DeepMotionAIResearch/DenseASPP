@@ -25,7 +25,7 @@ Performance of these checkpoints:
 
 Checkpoint name                                                           | Multi-scale inference       |  Cityscapes mIOU (val)         |  Cityscapes mIOU (test)         | File Size
 ------------------------------------------------------------------------- | :-------------------------: | :----------------------------: | :----------------------------: |:-------: |
-[DenseASPP161](https://drive.google.com/open?id=1N9fwyw6ck0RedTRPCu6NwErtZgzw9Ju6) | False <br> True    | 79.0%  <br> 80.0 %             |  -  <br> 79.0%  |  142.7 MB
+[DenseASPP161](https://drive.google.com/file/d/1sCr-OkMUayaHAijdQrzndKk2WW78MVZG/view?usp=sharing) | False <br> True    | 78.8%  <br> 79.8 %             |  -  <br> 79.0%  |  142.7 MB
 [MobileNetDenseASPP](*)                                                   | False <br> True             |  74.5%  <br> 75.0 %            |  -  <br> -      | 10.2 MB
 
 Please note that the performance of these checkpoints can be further improved by fine-tuning. Besides, these models were trained with **Pytorch 0.3.1**
