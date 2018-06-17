@@ -17,7 +17,7 @@ git clone https://github.com/DeepMotionAIResearch/DenseASPP.git
 ### 2. **Download pretrained model:**<br/>
 Put the model at the folder `weights`. We provide some checkpoints to run the code:
 
-**DenseNet161 based model**: [GoogleDrive](https://drive.google.com/open?id=1N9fwyw6ck0RedTRPCu6NwErtZgzw9Ju6)
+**DenseNet161 based model**: [GoogleDrive](https://drive.google.com/file/d/1sCr-OkMUayaHAijdQrzndKk2WW78MVZG/view?usp=sharing)
      
 **Mobilenet v2 based model**: Coming soon.
 
