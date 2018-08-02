@@ -16,7 +16,7 @@ COLOR_MAP = [(128, 64, 128), (244, 35, 232), (70, 70, 70), (102, 102, 156), (190
              (250, 170, 30), (220, 220, 0), (107, 142, 35), (152, 251, 152), (70, 130, 180), (220, 20, 60),
              (255,  0,  0), (0, 0, 142), (0, 0, 70), (0, 60, 100), (0, 80, 100), (0, 0, 230), (119, 11, 32)]
 
-inf_scales = ['flip', 0.5, 0.7, 1.0, 1.2, 1.5, 1.8, 0.9]
+inf_scales = [0.5, 0.75, 1.0, 1.25, 1.5, 1.8]
 data_transforms = transforms.Compose([transforms.ToTensor(),
                                       transforms.Normalize([0.290101, 0.328081, 0.286964],
                                                            [0.182954, 0.186566, 0.184475])])
@@ -77,12 +77,14 @@ class Inference(object):
         h, w = test_img.size
         pre = []
         for scale in inf_scales:
-            if scale == 'flip':
-                img_scaled = test_img.transpose(Image.FLIP_LEFT_RIGHT)
-            else:
-                img_scaled = test_img.resize((int(h * scale), int(w * scale)), Image.CUBIC)
-            pre_scaled = self.single_inference(img_scaled)
+            img_scaled = test_img.resize((int(h * scale), int(w * scale)), Image.CUBIC)
+            pre_scaled = self.single_inference(img_scaled, is_flip=False)
             pre.append(pre_scaled)
+
+            img_scaled = img_scaled.transpose(Image.FLIP_LEFT_RIGHT)
+            pre_scaled = self.single_inference(img_scaled, is_flip=True)
+            pre.append(pre_scaled)
+
         pre_final = self.__fushion_avg(pre)
 
         return pre_final
