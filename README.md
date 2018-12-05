@@ -17,7 +17,7 @@ git clone https://github.com/DeepMotionAIResearch/DenseASPP.git
 ### 2. **Download pretrained model:**<br/>
 Put the model at the folder `weights`. We provide some checkpoints to run the code:
 
-**DenseNet161 based model**: [GoogleDrive](https://drive.google.com/file/d/1sCr-OkMUayaHAijdQrzndKk2WW78MVZG/view?usp=sharing)
+**DenseNet161 based model**: [GoogleDrive](https://drive.google.com/open?id=1kMKyboVGWlBxgYRYYnOXiA1mj_ufAXNJ)
      
 **Mobilenet v2 based model**: Coming soon.
 
@@ -25,7 +25,7 @@ Performance of these checkpoints:
 
 Checkpoint name                                                           | Multi-scale inference       |  Cityscapes mIOU (val)         |  Cityscapes mIOU (test)         | File Size
 ------------------------------------------------------------------------- | :-------------------------: | :----------------------------: | :----------------------------: |:-------: |
-[DenseASPP161](https://drive.google.com/file/d/1sCr-OkMUayaHAijdQrzndKk2WW78MVZG/view?usp=sharing) | False <br> True    | 78.8%  <br> 79.8 %             |  -  <br> 79.0%  |  142.7 MB
+[DenseASPP161](https://drive.google.com/file/d/1sCr-OkMUayaHAijdQrzndKk2WW78MVZG/view?usp=sharing) | False <br> True    | 79.9%  <br> 80.6 %             |  -  <br> 79.5%  |  142.7 MB
 [MobileNetDenseASPP](*)                                                   | False <br> True             |  74.5%  <br> 75.0 %            |  -  <br> -      | 10.2 MB
 
 Please note that the performance of these checkpoints can be further improved by fine-tuning. Besides, these models were trained with **Pytorch 0.3.1**
