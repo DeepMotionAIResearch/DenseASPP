@@ -170,12 +170,12 @@ class _DenseAsppBlock(nn.Sequential):
         if bn_start:
             self.add_module('norm.1', bn(input_num, momentum=0.0003)),
 
-        self.add_module('relu.1', nn.ReLU(inplace=True)),
-        self.add_module('conv.1', nn.Conv2d(in_channels=input_num, out_channels=num1, kernel_size=1)),
+        self.add_module('relu_1', nn.ReLU(inplace=True)),
+        self.add_module('conv_1', nn.Conv2d(in_channels=input_num, out_channels=num1, kernel_size=1)),
 
-        self.add_module('norm.2', bn(num1, momentum=0.0003)),
-        self.add_module('relu.2', nn.ReLU(inplace=True)),
-        self.add_module('conv.2', nn.Conv2d(in_channels=num1, out_channels=num2, kernel_size=3,
+        self.add_module('norm_2', bn(num1, momentum=0.0003)),
+        self.add_module('relu_2', nn.ReLU(inplace=True)),
+        self.add_module('conv_2', nn.Conv2d(in_channels=num1, out_channels=num2, kernel_size=3,
                                             dilation=dilation_rate, padding=dilation_rate)),
 
         self.drop_rate = drop_out
